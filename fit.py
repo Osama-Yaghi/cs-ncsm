@@ -2252,38 +2252,94 @@ async def ncsd_generator(nuclei=['4He'],interaction=[('TBME.int')],run_params={'
             #    pass
             scp.close()
     return
+
 def help():
-    print("This code helps organizing the input files and runs the manyeffv3b code smoothly.")
-    print("The output is stored in folders named after the interaction, SRG, and nucleus. e.g. NNn3lo_SRG_4He.")
-    print("The eigen values are stored in files with names beginning in \'many_\'. Such as:\n")
-    print("many_NNn3lo_srg2.1_srgf1_4He-T12_1_N20_hw20_J0_T0_theta0.300_fit_Nf8")
-    print("The function you should call is:\n")
-    print("run_manyeff(nuclei,NN_interaction=['n3lo'],NNN_interaction={'regulator':'lnl','cutoff':[650,500],'c_D':[0.7],'c_E':[-0.06],'E8':[0.0]},run_params={'srg_evolution':True,'NNN_srg':False,'NNNN_srg':False,'lambda_range':[2.0],'srg_f':1.0,'N_m_range':[14],'hw_range':[20],'theta_range':[0.0],'Nf':-1},pless_params=None,output_stream=0,J=None,T=None,testing=False)")
-    arguments={
-        "nuclei":"The nucleus that you want to run the calculation for. For example: \'4He\'"
-        ,"NN_interaction":"a list of the nn interactions you want to use.e.g. n3lo n2losat,n4lo500,mtv, etc."
-        ,"NNN_interaction":"put \'None\' if you want to not use a 3N force."
-        ,"run_params":" A dictionary with some parameters explained as follows."
-        ,"srg_evolution":"A logical that determines whether SRG is used or not."
-        ,"NNN_srg":"a logical that determines if SRG is applied in the A=3 subspace"
-        ,"NNNN_srg":"a logical that determines if SRG is applied in the A=4 subspace"
-        ,"lambda_range":"a list of the lambda values to execute the code for"
-        ,"srg_f":"the ratio of T in the generator of SRG. This depricated and doesn't have an influence in the current version of the code. See SRG_module.f for more details."
-        ,"N_m_range":"The list of values of N_max. For 4-body systems use around N_max=18. For 3-body systems, use around N_max=50"
-        ,"hw_range":"the list of values for hw "
-        ,"theta_range":"the list of theta values in complex scaling, in units of radian."
-        ,"Nf":"the number of functions used in the fitting approach. if Nf is set to zero, the standard approach for matrix elements is used instead of the fitting approach. If Nf is set to <0, the new n3lo_q_c subroutine is used with modified regulators."
-        ,"output_stream":"if set to 0, the output stream is suppressed. if set to 1 it is printed in the terminal. If set to 2 it is printed in a file starting with \'manyeff.log..\'"
-        ,"testing":"a logical. If set to True, the code is run in a different directory marked by a \'Testing\' suffix"
-        ,"J,T":"Specify the J and T for the System"
-    }
-    print('-----------------------------')
-    print("This is a detailed description of the arguments:")
-    for key,value in arguments.items():
-        print("\t",key,": ",value)
-    print('-----------------------------')
-    print("Here is an example of how to run the calculation for 4H:\n")
-    print('python3 -c \'import fit;fit.run_manyeff(nuclei="4H",NN_interaction=["mtv"],NNN_interaction=None,run_params={"srg_evolution":True,"N_m_range":[21],"hw_range":[60],"theta_range":[0.58],"additional_opt":"4He_th","lambda_range":[2.4],"NNN_srg":True,"srg_f":1,"Nf":12},J=0,T=1,output_stream=2,testing=False)\'')
+    """Prints information about how to use this script to run manyeffv3b."""
+
+    print("""
+======================== HELP: manyeffv3b Interface ========================
+
+This script helps organize input files and run the manyeffv3b nuclear
+structure code smoothly. Output files are stored in directories named
+after the interaction, SRG parameters, and the nucleus. For example:
+
+    NNn3lo_SRG_4He/
+
+Eigenvalues are stored in files beginning with 'many_'. Example filename:
+
+    many_NNn3lo_srg2.1_srgf1_4He-T12_1_N20_hw20_J0_T0_theta0.300_fit_Nf8
+
+--------------------------------------------------------------------------
+Main Callable Function:
+--------------------------------------------------------------------------
+run_manyeff(nuclei,
+            NN_interaction=['n3lo'],
+            NNN_interaction={'regulator': 'lnl', 'cutoff': [650,500],
+                             'c_D': [0.7], 'c_E': [-0.06], 'E8': [0.0]},
+            run_params={'srg_evolution': True, 'NNN_srg': False,
+                        'NNNN_srg': False, 'lambda_range': [2.0],
+                        'srg_f': 1.0, 'N_m_range': [14], 'hw_range': [20],
+                        'theta_range': [0.0], 'Nf': -1},
+            pless_params=None,
+            output_stream=0,
+            J=None,
+            T=None,
+            testing=False)
+
+Description:
+    Executes manyeffv3b runs with specified nuclear force settings, model
+    space parameters, and output preferences.
+
+Parameters:
+    nuclei (str)           : The nucleus to calculate (e.g., '4He').
+    NN_interaction (list)  : List of NN interactions to use (e.g., ['n3lo'], ['mtv']).
+    NNN_interaction (dict) : Dictionary of 3N interaction settings or None to disable.
+    run_params (dict)      : Dictionary of model space and SRG parameters:
+        - srg_evolution    : Apply SRG evolution? (True/False)
+        - NNN_srg          : Apply SRG to A=3 space?
+        - NNNN_srg         : Apply SRG to A=4 space?
+        - lambda_range     : List of SRG λ values (e.g., [2.0, 2.2])
+        - srg_f            : SRG generator scaling factor (deprecated)
+        - N_m_range        : List of N_max values (e.g., [18, 20])
+        - hw_range         : Harmonic oscillator frequencies (MeV)
+        - theta_range      : List of complex scaling θ values (radians)
+        - Nf               : Number of basis functions in fitting approach.
+                             Nf = 0: no fitting, <0: use n3lo_q_c modified regulator
+
+    pless_params (dict)    : Optional dictionary for pless scheme (or None).
+    output_stream (int)    : 0=silent, 1=stdout, 2=log file ('manyeff.log...')
+    J (int)                : Total angular momentum (optional).
+    T (int)                : Isospin (optional).
+    testing (bool)         : Run in isolated 'Testing' subdirectory? (True/False)
+
+--------------------------------------------------------------------------
+Example Run:
+--------------------------------------------------------------------------
+Run a calculation for ⁴H with mtv interaction and Nf=12:
+
+    python3 -c 'import fit; fit.run_manyeff(
+        nuclei="4H",
+        NN_interaction=["mtv"],
+        NNN_interaction=None,
+        run_params={
+            "srg_evolution": True,
+            "N_m_range": [21],
+            "hw_range": [60],
+            "theta_range": [0.58],
+            "additional_opt": "4He_th",
+            "lambda_range": [2.4],
+            "NNN_srg": True,
+            "srg_f": 1,
+            "Nf": 12
+        },
+        J=0,
+        T=1,
+        output_stream=2,
+        testing=False
+    )'
+
+==========================================================================
+""")
 
 if __name__ == "__main__":
     from inspect import getmembers, isfunction
