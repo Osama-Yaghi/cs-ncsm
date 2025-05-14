@@ -1,0 +1,38 @@
+
+   *** Date (m-d-y): 11 27 2024
+   *** Time: 13 h 21 min 31.560 s
+   *** CPU time=          0.014 s
+
+ Many-Fermion Problem in Relative-Coordinate Space
+ *************************************************
+
+ No harmonic oscillator binding potential
+
+ Similarity-Renormalization-Group evolved NN interaction
+ lambda=  2.1000
+ G= f T + (1-f) H_d/f=   1.0000000000000000     
+
+ A= 4    Z= 2    N= 2    J=  0     T=  0    Parity= +
+ hbar*Omega= 20.0000      N_max= 20
+
+ *** Basis construction ***
+ **************************
+
+ (A-2,2) basis read from files
+ **************************************************************
+
+ *** Interaction calculation ***
+ *******************************
+
+ N3LO NN potential in momentum space
+ nrelm= 150    b(HO)=  1.4400
+ pc= 0.2500000E+02   pinf= 0.1000000E-08   nstep=  500   pstep=  0.0500
+
+ *** Two-body effective interaction calculation ***
+ **************************************************
+
+ NN SRG evolution in Nmax=300 space
+
+ S=  1    j=  1    T=  0
+
+ Dimension= 301

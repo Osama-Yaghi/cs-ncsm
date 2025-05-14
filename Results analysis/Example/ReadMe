@@ -1,0 +1,14 @@
+This example contains the output of the cs-ncsm code for the 4He nucleus. It can be used to test the data analysis and visualization using the spectrum_reader.py and resonance_search.py scripts.
+
+1-Copy the files with prefix "many_" to the folder containing the python scripts:
+ spectrum_reader.py 
+ resonance_search.py
+These files contain the raw ouput of the manyeffv3b.exe code.
+
+2- use spectrum_reader.py to read the data and generate an organized pandas dataframe containing the info for the nucleus ('4He'). You should get a file similar to '4He' that already exist in the example folder.
+2- use spectrum reader.py to visualize the data with various functions. You should get plots similar to those in the graphs/ folder in the example.
+3- generate a file with the resonances info. You should get a file similar to the "resonances_..." files that exist in the example folder.
+4- use resonances_search.py to plot and visualize the energy levels diagrams starting from the "resonances_..." files. You should get a plot similar to those in the spectra/ folder.
+for detailed info on using each of the scripts, run the script directly or call its  .help() function:
+	spectrum_reader.help()
+        resonance_search.help()

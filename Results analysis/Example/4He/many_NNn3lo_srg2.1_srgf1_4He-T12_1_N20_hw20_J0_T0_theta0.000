@@ -1,0 +1,583 @@
+
+   *** Date (m-d-y): 11 27 2024
+   *** Time: 15 h 02 min 22.224 s
+   *** CPU time=          0.013 s
+
+ Many-Fermion Problem in Relative-Coordinate Space
+ *************************************************
+
+ No harmonic oscillator binding potential
+
+ Similarity-Renormalization-Group evolved NN interaction
+ lambda=  2.1000
+ G= f T + (1-f) H_d/f=   1.0000000000000000     
+
+ A= 4    Z= 2    N= 2    J=  0     T=  0    Parity= +
+ hbar*Omega= 20.0000      N_max= 20
+
+ *** Basis construction ***
+ **************************
+
+ (A-2,2) basis read from files
+ **************************************************************
+
+ *** Interaction calculation ***
+ *******************************
+
+ N3LO NN potential in momentum space
+ nrelm= 100    b(HO)=  1.4400
+ pc= 0.2500000E+02   pinf= 0.1000000E-08   nstep=  500   pstep=  0.0500
+
+ *** Two-body effective interaction calculation ***
+ **************************************************
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  1    T=  0
+
+ Dimension= 201
+ Two-nucleon system exact eigenvalues
+    -2.2246     0.3183     0.8163     1.2434     2.0338     2.7287     3.7366     4.7468
+     5.9294     7.2854     8.6150    10.3390    11.7955    13.9049    15.4725    17.9819
+    19.6471    22.5695    24.3202    27.6675    29.4926
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    -2.2008     4.1678     7.1750    13.9924    18.1849    28.9765    34.0071    49.3496
+    54.9833    75.5821    81.6060   108.3544   114.8112   148.9923   155.7647   199.3822
+   204.9142   255.9955   267.2797   338.1910   355.2549
+ Lowest two-nucleon eigenstate
+     0.9151     0.1602    -0.1990     0.0510     0.2230     0.0574    -0.1472     0.0140
+     0.0835     0.0146    -0.0875    -0.0027     0.0465     0.0022    -0.0423    -0.0024
+     0.0263     0.0013    -0.0167    -0.0003     0.0081
+ The maximum relative error:   12.093594923483138     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  2    T=  1
+
+ Dimension= 199
+ Two-nucleon system exact eigenvalues
+     0.5089     1.2091     1.4940     2.6940     2.9568     4.6509     4.9064     7.0953
+     7.3379    10.0252    10.2526    13.4446    13.6498    17.3507    17.5299    21.7456
+    21.8964    26.6238    26.7527
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     4.5468    11.0299    13.3119    24.6866    26.5160    43.1924    44.4941    66.9737
+    67.9054    96.6063    97.6733   133.2484   134.8364   178.8134   181.3384   237.5895
+   241.3413   318.5686   325.2131
+ Lowest two-nucleon eigenstate
+    -0.3174     0.0065     0.3995    -0.0012    -0.4303     0.0024     0.4168    -0.0012
+    -0.3805     0.0011     0.3269    -0.0008    -0.2643     0.0006     0.1970    -0.0004
+    -0.1287     0.0002     0.0625
+ The maximum relative error:   11.156264737649510     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  3    T=  0
+
+ Dimension= 199
+ Two-nucleon system exact eigenvalues
+     0.8162     1.6454     2.0328     3.3674     3.7323     5.5606     5.9172     8.2358
+     8.5884    11.3965    11.7468    15.0442    15.3932    19.1801    19.5287    23.8050
+    24.1543    28.9197    29.2715
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     7.1151    14.4846    17.8571    29.9919    33.1363    50.2828    53.2691    75.9044
+    78.7339   107.5546   110.4072   146.3914   149.3445   193.8599   196.4788   250.6509
+   256.2344   331.5166   339.4622
+ Lowest two-nucleon eigenstate
+    -0.2323    -0.0059     0.3462     0.0020    -0.4081    -0.0024     0.4260     0.0016
+    -0.4093    -0.0013     0.3663     0.0010    -0.3050    -0.0007     0.2324     0.0005
+    -0.1541    -0.0002     0.0755
+ The maximum relative error:   10.597040399255464     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  4    T=  1
+
+ Dimension= 197
+ Two-nucleon system exact eigenvalues
+     1.2091     2.1629     2.6940     4.1614     4.6511     6.6227     7.0958     9.5603
+    10.0267    12.9869    13.4480    16.8996    17.3579    21.3047    21.7602    26.1999
+    26.6532
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    11.0346    19.9901    24.7167    38.9217    43.2937    63.0766    67.2685    93.3239
+    97.3497   130.8365   134.6661   177.5603   181.1880   237.2508   240.7724   319.3113
+   322.9598
+ Lowest two-nucleon eigenstate
+    -0.2126     0.0009     0.3409    -0.0004    -0.4196     0.0004     0.4473    -0.0003
+    -0.4295     0.0002     0.3753    -0.0002    -0.2954     0.0001     0.2000    -0.0001
+    -0.0989
+ The maximum relative error:   11.187486454204933     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  5    T=  0
+
+ Dimension= 197
+ Two-nucleon system exact eigenvalues
+     1.6454     2.7165     3.3674     4.9623     5.5605     7.6584     8.2356    10.8298
+    11.3960    14.4836    15.0434    18.6234    19.1792    23.2515    23.8047    28.3695
+    28.9212
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    14.4804    24.2431    29.9735    44.9753    50.2523    70.7964    75.9104   102.6602
+   107.7270   141.7722   146.8649   190.0669   195.1808   251.2026   256.1968   334.7698
+   339.6857
+ Lowest two-nucleon eigenstate
+    -0.1777    -0.0012     0.3072     0.0007    -0.4001    -0.0007     0.4457     0.0005
+    -0.4428    -0.0004     0.3972     0.0003    -0.3188    -0.0002     0.2189     0.0001
+    -0.1092
+ The maximum relative error:   10.800355082453978     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  6    T=  1
+
+ Dimension= 195
+ Two-nucleon system exact eigenvalues
+     2.1629     3.3572     4.1614     5.8879     6.6227     8.8613     9.5603    12.3015
+    12.9869    16.2256    16.8998    20.6363    21.3050    25.5371    26.2006    30.9300
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    19.9911    31.5748    38.9271    56.4049    63.0919    86.9481    93.3561   124.6380
+   130.8898   171.4701   177.6228   231.1777   237.2713   313.2205   319.2889
+ Lowest two-nucleon eigenstate
+    -0.1870     0.0003     0.3307    -0.0002    -0.4324     0.0002     0.4748    -0.0001
+    -0.4550     0.0001     0.3813    -0.0001    -0.2690     0.0000     0.1360
+ The maximum relative error:   11.265314062146905     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  7    T=  0
+
+ Dimension= 195
+ Two-nucleon system exact eigenvalues
+     2.7165     4.0222     4.9623     6.8098     7.6584    10.0193    10.8297    13.6937
+    14.4835    17.8461    18.6233    22.4824    23.2511    27.6060    28.3689    33.2195
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    24.2416    36.5798    44.9677    63.2020    70.7767    95.3841   102.6249   134.6557
+   141.7239   183.0506   190.0126   244.3030   251.1648   327.9935   334.7817
+ Lowest two-nucleon eigenstate
+     0.1666     0.0004    -0.3089    -0.0004     0.4195     0.0003    -0.4745    -0.0003
+     0.4655     0.0002    -0.3971    -0.0001     0.2837     0.0001    -0.1446
+ The maximum relative error:   10.881238012902786     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  8    T=  1
+
+ Dimension= 193
+ Two-nucleon system exact eigenvalues
+     3.3572     4.7852     5.8879     7.8670     8.8613    11.3605    12.3015    15.3126
+    16.2256    19.7389    20.6363    24.6521    25.5372    30.0522    30.9301    35.9460
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    31.5752    46.0828    56.4070    77.7078    86.9538   115.8653   124.6494   162.9586
+   171.4869   222.8196   231.1889   304.9557   313.2185
+ Lowest two-nucleon eigenstate
+     0.1941    -0.0001    -0.3561     0.0001     0.4705    -0.0001    -0.5070     0.0001
+     0.4589    -0.0000    -0.3398     0.0000     0.1763
+ The maximum relative error:   11.370351171785387     
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  0    j=  0    T=  1    l=  0
+
+ Dimension= 101
+ Two-nucleon system exact eigenvalues
+     0.1779     0.7231     1.7608     3.3032     5.3602     7.9240    10.9988    14.5802
+    18.6708    23.2683    28.3738    33.9865    40.1069    46.7358    53.8737    61.5235
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     1.0435     6.1112    16.1254    31.2198    51.6294    77.9011   111.0792   153.6465
+   209.2366   284.9915   398.1762
+ Lowest two-nucleon eigenstate
+     0.6722    -0.4061     0.3686    -0.3040     0.2453    -0.2059     0.1596    -0.1234
+     0.0882    -0.0562     0.0269
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  1    j=  0    T=  1    l=  1
+
+ Dimension= 100
+ Two-nucleon system exact eigenvalues
+     0.5082     1.4889     2.9402     4.8692     7.2730    10.1566    13.5247    17.3824
+    21.7369    26.5913    31.9524    37.8214    44.2039    51.1003    58.5146    66.4472
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     4.4455    12.9456    26.0752    44.4873    68.9019   100.1113   139.5467   189.4647
+   256.6190   343.8846
+ Lowest two-nucleon eigenstate
+    -0.3355     0.4065    -0.4283     0.4139    -0.3745     0.3214    -0.2590     0.1927
+    -0.1259     0.0609
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  0    j=  1    T=  0    l=  1
+
+ Dimension= 100
+ Two-nucleon system exact eigenvalues
+     0.4994     1.4794     2.9543     4.9259     7.3942    10.3588    13.8193    17.7756
+    22.2280    27.1774    32.6248    38.5720    45.0209    51.9742    59.4350    67.4070
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     4.6137    13.8495    27.9295    47.1614    72.1484   103.9377   144.4015   196.2604
+   263.5968   351.2033
+ Lowest two-nucleon eigenstate
+     0.2885    -0.3971     0.4293    -0.4224     0.3867    -0.3338     0.2705    -0.2017
+     0.1321    -0.0639
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  1    j=  1    T=  1    l=  1
+
+ Dimension= 100
+ Two-nucleon system exact eigenvalues
+     0.5094     1.4981     2.9710     4.9402     7.4028    10.3618    13.8169    17.7688
+    22.2194    27.1686    32.6197    38.5726    45.0311    51.9953    59.4689    67.4523
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     4.6415    13.8225    27.8793    47.1839    72.2658   104.1056   144.0161   191.5307
+   229.9872   309.4997
+ Lowest two-nucleon eigenstate
+    -0.2915     0.3988    -0.4289     0.4219    -0.3856     0.3330    -0.2694     0.2013
+    -0.1315     0.0639
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  0    j=  2    T=  1    l=  2
+
+ Dimension= 100
+ Two-nucleon system exact eigenvalues
+     0.8219     2.0496     3.7495     5.9369     8.6051    11.7604    15.3988    19.5247
+    24.1358    29.2350    34.8222    40.8995    47.4682    54.5303    62.0884    70.1440
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     7.1569    17.8449    32.9949    52.9244    78.1544   109.3205   147.6497   195.6808
+   262.9981   356.8135
+ Lowest two-nucleon eigenstate
+     0.2346    -0.3464     0.4081    -0.4257     0.4089    -0.3659     0.3047    -0.2320
+     0.1541    -0.0753
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  2    T=  0    l=  2
+
+ Dimension= 100
+ Two-nucleon system exact eigenvalues
+     0.8161     2.0316     3.7270     5.9017     8.5539    11.6823    15.2859    19.3648
+    23.9195    28.9514    34.4627    40.4561    46.9352    53.9045    61.3688    69.3338
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+     7.0417    17.4375    32.0039    51.0948    75.3601   105.8390   144.2642   193.3193
+   257.5977   343.3975
+ Lowest two-nucleon eigenstate
+     0.2477    -0.3497     0.4097    -0.4241     0.4062    -0.3626     0.3014    -0.2294
+     0.1521    -0.0744
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  0    j=  3    T=  0    l=  3
+
+ Dimension=  99
+ Two-nucleon system exact eigenvalues
+     1.2059     2.6803     4.6356     7.0784    10.0110    13.4348    17.3511    21.7609
+    26.6653    32.0655    37.9626    44.3580    51.2531    58.6496    66.5491    74.9537
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    11.0033    24.7609    43.4990    67.7369    98.2075   136.0162   182.9198   242.2566
+   323.7171
+ Lowest two-nucleon eigenstate
+    -0.2104     0.3402    -0.4195     0.4476    -0.4300     0.3759    -0.2958     0.2004
+    -0.0991
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  1    j=  3    T=  1    l=  3
+
+ Dimension=  99
+ Two-nucleon system exact eigenvalues
+     1.2091     2.6941     4.6514     7.0970    10.0295    13.4537    17.3680    21.7764
+    26.6773    32.0747    37.9671    44.3583    51.2474    58.6378    66.5294    74.9251
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    11.0468    24.7846    43.4808    67.6458    97.9829   135.5614   182.1699   241.2758
+   322.8630
+ Lowest two-nucleon eigenstate
+    -0.2109     0.3403    -0.4194     0.4475    -0.4299     0.3758    -0.2958     0.2004
+    -0.0991
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  0    j=  4    T=  1    l=  4
+
+ Dimension=  99
+ Two-nucleon system exact eigenvalues
+     1.6472     3.3781     5.5753     8.2521    11.4146    15.0624    19.1985    23.8231
+    28.9378    34.5440    40.6427    47.2361    54.3248    61.9119    69.9978    78.5861
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    14.5256    30.0072    50.2423    75.8105   107.4710   146.3964   194.5782   255.8233
+   339.6315
+ Lowest two-nucleon eigenstate
+     0.1779    -0.3072     0.4000    -0.4456     0.4428    -0.3973     0.3188    -0.2190
+     0.1092
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  4    T=  0    l=  4
+
+ Dimension=  99
+ Two-nucleon system exact eigenvalues
+     1.6454     3.3674     5.5602     8.2346    11.3933    15.0375    19.1680    23.7855
+    28.8911    34.4858    40.5708    47.1475    54.2177    61.7831    69.8458    78.4082
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    14.4618    29.8684    49.9526    75.2794   106.6197   145.2424   193.3965   255.2587
+   339.5441
+ Lowest two-nucleon eigenstate
+     0.1797    -0.3082     0.4005    -0.4455     0.4423    -0.3966     0.3182    -0.2185
+     0.1090
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  0    j=  5    T=  0    l=  5
+
+ Dimension=  98
+ Two-nucleon system exact eigenvalues
+     2.1619     4.1533     6.6088     9.5458    12.9696    16.8828    21.2873    26.1846
+    31.5761    37.4635    43.8483    50.7320    58.1164    66.0033    74.3945    83.2922
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    19.9512    38.9132    63.1415    93.5067   131.1623   177.9663   237.4631   319.2104
+
+ Lowest two-nucleon eigenstate
+    -0.1866     0.3305    -0.4324     0.4749    -0.4551     0.3814    -0.2690     0.1360
+
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  1    j=  5    T=  1    l=  5
+
+ Dimension=  98
+ Two-nucleon system exact eigenvalues
+     2.1629     4.1614     6.6227     9.5605    12.9873    16.9006    21.3066    26.2034
+    31.5953    37.4817    43.8658    50.7480    58.1311    66.0163    74.4058    83.3018
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    19.9960    38.9531    63.1649    93.5085   131.1465   177.9570   237.5023   319.3117
+
+ Lowest two-nucleon eigenstate
+    -0.1866     0.3305    -0.4324     0.4749    -0.4551     0.3814    -0.2691     0.1360
+
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  0    j=  6    T=  1    l=  6
+
+ Dimension=  98
+ Two-nucleon system exact eigenvalues
+     2.7171     4.9681     7.6712    10.8431    14.4999    18.6402    23.2698    28.3876
+    33.9978    40.0995    46.6967    53.7889    61.3800    69.4700    78.0628    87.1589
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    24.2863    45.0108    70.8026   102.6143   141.6609   189.9179   251.1524   334.8922
+
+ Lowest two-nucleon eigenstate
+     0.1666    -0.3088     0.4194    -0.4745     0.4655    -0.3971     0.2837    -0.1446
+
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  6    T=  0    l=  6
+
+ Dimension=  98
+ Two-nucleon system exact eigenvalues
+     2.7165     4.9623     7.6584    10.8296    14.4831    18.6222    23.2490    28.3649
+    33.9715    40.0701    46.6622    53.7496    61.3338    69.4169    78.0010    87.0882
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    24.2323    44.9195    70.6400   102.3377   141.2437   189.4223   250.8257   334.7515
+
+ Lowest two-nucleon eigenstate
+     0.1672    -0.3093     0.4196    -0.4745     0.4653    -0.3969     0.2835    -0.1445
+
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  0    j=  7    T=  0    l=  7
+
+ Dimension=  97
+ Two-nucleon system exact eigenvalues
+     3.3569     5.8838     8.8499    12.2889    16.2108    20.6202    25.5201    30.9126
+    36.7996    43.1829    50.0644    57.4459    65.3295    73.7170    82.6108    92.0130
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    31.5336    56.3769    86.9572   124.7051   171.5858   231.2325   313.1202
+ Lowest two-nucleon eigenstate
+    -0.1940     0.3561    -0.4705     0.5070    -0.4589     0.3398    -0.1763
+
+ NN SRG evolution in Nmax=199 space
+
+ S=  1    j=  7    T=  1    l=  7
+
+ Dimension=  97
+ Two-nucleon system exact eigenvalues
+     3.3572     5.8879     8.8613    12.3016    16.2257    20.6364    25.5375    30.9308
+    36.8185    43.2020    50.0838    57.4650    65.3485    73.7352    82.6287    92.0297
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    31.5781    56.4212    86.9934   124.7300   171.6090   231.2884   313.2325
+ Lowest two-nucleon eigenstate
+    -0.1940     0.3560    -0.4704     0.5070    -0.4590     0.3398    -0.1763
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  0    j=  8    T=  1    l=  8
+
+ Dimension=  97
+ Two-nucleon system exact eigenvalues
+     4.0224     6.8125    10.0288    13.7059    17.8595    22.4980    27.6221    33.2372
+    39.3428    45.9432    53.0384    60.6319    68.7244    77.3191    86.4176    96.0226
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    36.6232    63.2442    95.4126   134.6588   183.0338   244.3257   328.0999
+ Lowest two-nucleon eigenstate
+    -0.1801     0.3413    -0.4630     0.5096    -0.4688     0.3513    -0.1836
+
+ NN SRG evolution in Nmax=200 space
+
+ S=  1    j=  8    T=  0    l=  8
+
+ Dimension=  97
+ Two-nucleon system exact eigenvalues
+     4.0222     6.8098    10.0193    13.6937    17.8460    22.4821    27.6054    33.2183
+    39.3228    45.9209    53.0143    60.6051    68.6950    77.2863    86.3812    95.9821
+
+
+ model-space diagonalization:
+ Two-nucleon system eigenvalues
+    36.5730    63.1691    95.2936   134.4754   182.7937   244.1268   327.9776
+ Lowest two-nucleon eigenstate
+     0.1803    -0.3415     0.4631    -0.5096     0.4687    -0.3511     0.1836
+ **************************************************************
+
+ *** Hamiltonian calculation ***
+ *******************************
+
+ *** Bare interaction used ***
+
+ A=  4    Model-space dimension= 7775 for N_max= 20
+ Eigenvalues
+  -28.0967   -7.0942
+
+ Ground-state energy
+  -28.0967
+
+ Excitation energies
+    0.0000   21.0024
+
+ A=  4    Model-space dimension= 4750 for N_max= 18
+ Eigenvalues
+  -28.0955   -6.8800    2.5046    3.6178    4.5521    8.8653    9.6894   12.5019
+   -0.0289   -0.0477   -0.0529   -0.0393   -0.0081    0.0329    0.0712    0.0924
+
+ A=  4    Model-space dimension= 2775 for N_max= 16
+ Eigenvalues
+  -28.0931   -6.5725    3.6778    4.5944    6.0304    9.9538   11.1299   14.3436
+   -0.0289   -0.0477   -0.0529   -0.0393   -0.0081    0.0329    0.0712    0.0924
+
+ A=  4    Model-space dimension= 1539 for N_max= 14
+ Eigenvalues
+  -28.0860   -6.1512    5.0124    5.8620    8.0410   11.3000   12.9683   16.6936
+    0.0000   -0.0000   -0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+ A=  4    Model-space dimension=  801 for N_max= 12
+ Eigenvalues
+  -28.0578   -5.5731    6.4875    7.7194   10.8959   13.0293   15.4137   19.7475
+    0.0000   -0.0000   -0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+ A=  4    Model-space dimension=  384 for N_max= 10
+ Eigenvalues
+  -27.9568   -4.4904    8.3242   10.2052   14.1467   15.3105   18.7342   23.9614
+    0.0000   -0.0000   -0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+ A=  4    Model-space dimension=  167 for N_max=  8
+ Eigenvalues
+  -27.5966   -3.2685   10.7123   13.6975   18.4533   21.0427   23.5922   29.8615
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+ A=  4    Model-space dimension=   64 for N_max=  6
+ Eigenvalues
+  -26.8787   -0.1824   14.4750   18.8246   23.3097   27.9151   31.4121   39.1056
+    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000    0.0000
+
+ A=  4    Model-space dimension=   20 for N_max=  4
+ Eigenvalues
+  -25.5415    4.0808   19.8960   25.7010   31.3022   38.7814   47.6699   55.2067
+   54.9833   75.5821   81.6060  108.3544  114.8112  148.9923  155.7647  199.3822
+
+ A=  4    Model-space dimension=    5 for N_max=  2
+ Eigenvalues
+  -22.5874    9.4543   33.5630   40.3460   51.2048
+
+ A=  4    Model-space dimension=    1 for N_max=  0
+ Eigenvalues
+  -19.9478
+
+ **************************************************************
+
+   *** Date (m-d-y): 11 27 2024
+   *** Time: 15 h 30 min 30.697 s
+   *** CPU time=     227914.274 s
+   *** CPU time for this calculation:    227914.261 s
+   *** Wall-clock time for this calculation:      1688.473 s
+

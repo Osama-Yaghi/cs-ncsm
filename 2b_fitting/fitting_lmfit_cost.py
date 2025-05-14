@@ -7,6 +7,7 @@ from lmfit import Model,Parameters,minimize
 import sys
 import inspect
 import os
+import textwrap
 #parameters to modify
 
 prange=int(6.0)
@@ -777,7 +778,14 @@ User-Callable Functions:
 """)
     user_funcs = [fit, fitallj, fitall, fit_parallel]
     for f in user_funcs:
-        print(inspect.getdoc(f))
+        doc=inspect.getdoc(f)
+        if doc:
+            lines=doc.split('\n',1)
+            signature=lines[0]
+            description=textwrap.indent(textwrap.fill(lines[1],width=75),prefix='\t\t') if len(lines)>1 else ''
+            print(f"  {f.__name__:<20}: {signature}")
+            if description:
+                print(description)
         print()
 
     print("---------------------------------------------------------------")
@@ -796,41 +804,5 @@ Usage Example:
 """)
 
 
-def help2():
-    user_functions={"fit(J,v_n,inn)":["This function fits channels with a single J value and isospin projection","J= the total angular momentum","v_n= the number of mesh points on each axis","inn= the isospin projection (pp,nn,np)"]
-               ,"fitallj(Jmin,Jmax,v_n,inn)":[
-"This function fits the interaction for all J values in a range."
-,"Jmin= the lower limit on the total angular momentum","Jmax=the upper limit on J"
-,"v_n= the number of mesh points on each axis","inn= the isospin projection(pp,nn,np)"]
-               ,"fitall(Jmin,Jmax,v_n)":["same as fittallj but fits also all isospin projections (nn,np,pp)"]
-               ,"fit_parallel(Jmin,Jmax,v_n,inn)":[
-"similar to fittallj but runs proccesses on parallel significantly reducing running time"]
-              }
-    internal_functions={
-        "run_fit_2(v_n,x1,xy,v1)":["This function does the fitting for each mesh. This is where the fitting procedure is specified. It needs to be modified if a diffirent fitting method is needed."]
-        ,"input_file_name,output_file_name":["These specify the location and names of the input and output files. Modify them here if needed."]
-    }
-    parameters={"prange":"the momentum range of the mesh"
-                ,"Nf":"the number of functions used in the fit (2-16)"
-                ,"interaction":"the interaction used. This is used in the naming of the generated files"
-                ,"tries":"the number of fitting attempts done with randomized initial parameters before the best one is chosen"
-    }
-    print("This codes reades the nn interaction on a momentum mesh, and generates a functional form based on a fitting procedure. It reads input from fit_input/ and generates and output in lmfit_parameters/")
-    print('-----------------------------')
-    print("These are the parameters that should be set by the user:")
-    for key,value in parameters.items():
-        print('--',key,":",value)
-    print('-----------------------------')
-    print("These are the functions that should be called by the user:")
-    for key,value in user_functions.items():
-        print('--',key)
-        for element in value:
-            print('\t',element)
-    print('-----------------------------')
-    print("These are the internal functions:")
-    for key,value in internal_functions.items():
-        print('--',key)
-        for element in value:
-            print('\t',element)
 if __name__=='__main__':
     help()
