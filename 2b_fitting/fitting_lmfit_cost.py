@@ -6,6 +6,7 @@ from mpl_toolkits.mplot3d import axes3d
 from lmfit import Model,Parameters,minimize
 import sys
 import inspect
+import os
 #parameters to modify
 
 prange=int(6.0)
@@ -584,12 +585,15 @@ def run_fit_successive(v_n,x1,xy,v1,Nf_in,old_params):
     return best_model,scaling
 
 def input_file_name(J,ij,v_n,inn,prange):
+    os.makedirs("fit_input",exist_ok=True)
     file_name1="fit_input/fit-mesh_v_n{0:d}.dat".format(v_n)
     file_name1="fit_input/fit-mesh_v_n{0:d}_prange{1:.2f}.dat".format(v_n,prange)
     #file_name2="fit_input/interaction_mesh_"+inn+"_n3lo_v_n{0:d}_range{1:.2f}_J{2:d}_ch{3:d}".format(v_n,prange,J,ij)+".dat"
     file_name2="fit_input/interaction_mesh_"+inn+'_'+ interaction+"_v_n{0:d}_range{1:.2f}_J{2:d}_ch{3:d}".format(v_n,prange,J,ij)+".dat"
     return file_name1,file_name2
 def output_file_name(Nf,J,ij,v_n,inn,prange):
+    os.makedirs("lmfit_parameteres",exist_ok=True)
+    os.makedirs("lmfit_graphs",exist_ok=True)
     #root="v_lmfit_params_v5_"+inn+"_n3lo_v_n{0:d}_range{4:.2f}_J{1:d}_ch{2:d}_Nf{3:d}".format(v_n,J,ij,Nf,prange)
     root="v_lmfit_params_v5_"+inn+'_'+interaction+"_v_n{0:d}_range{4:.2f}_J{1:d}_ch{2:d}_Nf{3:d}".format(v_n,J,ij,Nf,prange)
     file_name1="lmfit_parameters/"+root+".fit"
@@ -616,7 +620,7 @@ def fit(J,v_n,inn):
         #best_fit,scaling=run_fit_successive(v_n,x1,xy,v1,4,old_params)
         best_fit,scaling=run_fit_2(v_n,x1,xy,v1)
         #write_parameters(best_fit,scaling,out_file1)
-        plot2(x1,xy,v1,best_fit,out_file2)
+        plot(x1,xy,v1,best_fit,out_file2)
         #sys.exit()
         #best_fit,scaling=run_fit(v_n,x1,xy,v1)
 def fitallj(Jmin,Jmax,v_n,inn,Nf_in=Nf):
@@ -698,15 +702,6 @@ def fitall(Jmin,Jmax,v_n,Nf_in=Nf):
 import concurrent.futures
 
 def parallel_func(J,ij,v_n,inn):
-    """fit_parallel(Jmin, Jmax, v_n, inn)
-    Same as fitallj but runs in parallel for better performance.
-
-    Parameters:
-    - Jmin : Minimum J
-    - Jmax : Maximum J
-    - v_n  : Mesh resolution
-    - inn  : Isospin projection ('pp', 'nn', 'np')
-    """
     in_file1,in_file2=input_file_name(J,ij,v_n,inn,prange)
     out_file1,out_file2=output_file_name(Nf,J,ij,v_n,inn,prange)
     x1,xy,v1=fromfile(v_n,in_file1,in_file2)
@@ -718,14 +713,23 @@ def parallel_func(J,ij,v_n,inn):
 
 # Main function to setup and run the parallel tasks
 def fit_parallel(Jmin,Jmax,v_n,inn,Nf_in):
+    """fit_parallel(Jmin, Jmax, v_n, inn,Nf_in)
+    Same as fitallj but runs in parallel for better performance.
+
+    Parameters:
+    - Jmin : Minimum J
+    - Jmax : Maximum J
+    - v_n  : Mesh resolution
+    - [inn]  : List of isospin projection ('pp', 'nn', 'np')
+    - Nf_in: the number of functions to be used in the fit
+    """
     global Nf
     Nf=Nf_in
     timei=time.time()
     with concurrent.futures.ProcessPoolExecutor() as executor:
         # Submit all tasks to the executor
 
-        futures = [executor.submit(parallel_func, J, ij,v_n,inn1) for J in
-                   range(Jmin,Jmax+1) for ij in range(1,7) for inn1 in inn]
+        futures = [executor.submit(parallel_func, J, ij,v_n,inn1) for J in range(Jmin,Jmax+1) for ij in range(1,7) for inn1 in inn]
 
         # Process the results as they complete
         for future in concurrent.futures.as_completed(futures):
