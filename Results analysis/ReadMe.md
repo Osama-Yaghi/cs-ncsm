@@ -35,6 +35,6 @@ and plot energy levels diagrams. It allows comparison with benchmark data (e.g.,
 ### Functions
 -energy_levels(file_names, nucleus, bar_style, plot_thresholds, comparison): Loads resonance files and compares them to a benchmark defined by the comparison parameter.
 -quick(nuclei1): Calculates the expected critical angle of resonances based on R-matrix analysis data.
-##Detailed info
+## Detailed info
 run resoanance_search.help() or simply the code itsef: python resoanance_search.py 
 to get detailed info on each function and how to use it.
