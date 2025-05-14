@@ -26,6 +26,10 @@ python -c 'import fitting_lmfit_cost as flc; flc.fit_parallel(0, 4, 40, "np")'
 
 This command fits the interaction for J values between 0 and 4, using 40 mesh points on each axis and an isospin projection of `'np'`.
 
+## Example results
+
+example input and output are stored in the example folder. Copy the content of Example/fit_input into the fit_input/ directory and run the code.
+You should get results similar to those in Example/lmfit_parameters and Example/lmfit_graphs
 ## Output
 
 After running any of the fitting functions, the output files containing the fitted parameters will be stored in the `lmfit_parameters/` directory.
